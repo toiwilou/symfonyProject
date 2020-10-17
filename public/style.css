@@ -90,3 +90,9 @@ ul.tabs, .tabs li {
     background-color: #b1eff0;
     color: #243cf0;
 }
+
+.backpack, .name {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}

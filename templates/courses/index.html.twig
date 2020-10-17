@@ -24,8 +24,16 @@
                     <div class="col-md-5 cour-block">
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body">
-                                <h3>{{ course.titleCourse }}</h3>
-                                <h3>{{ course.daysCourse }}</h3>
+                                <h4>Cours régulier de {{ course.titleCourse }}</h4>
+                                <h7>{{ course.daysCourse }}</h7>
+                                <div class="figure"><img src="img/backpack.png"></div>
+                                <div class="figcap">Toiwilou Hassane</div>
+                                <div class="figure"><img src="img/calendar.png"></div>
+                                <div class="figcap">Lundi, Mardi, Mercredi, Jeudi, Vendredi<span>À partir {{ course.daysCourse }}</span></div>
+                                <div class="figure"><img src="img/diplome.png"></div>
+                                <div class="figcap">6h/jour <span>À partir de 9h 15</span></div>
+                                <div class="figure"><img src="img/watch.png"></div>
+                                <div class="figcap">Makan Kone</div>
                                 <p>{{ course.description }}</p>
                                 <button type="button" class="btn btn-lg btn-block detail">Détails</button>
                             </div>
