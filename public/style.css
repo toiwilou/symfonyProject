@@ -3,8 +3,14 @@ body {
     background-color: #dce6f5;
 }
 
+.bnjr-block {
+    height: 400px;
+}
+
 .img, .bnjr {
     display: inline-block;
+    line-height: 300px;
+    margin: 10px;
 }
 
 .accueil-desc {
@@ -115,8 +121,26 @@ ul.tabs, .tabs li {
     color: #243cf0;
 }
 
-.backpack, .name {
-    margin: 0;
-    padding: 0;
+.figure1, .figcap1 {
     display: inline-block;
+}
+
+.figure2, .figcap2 {
+    display: inline-block;
+}
+
+.span-nextCourse {
+    font-size: small;
+}
+
+.figure3, .figcap3 {
+    display: inline-block;
+}
+
+.figure4, .figcap4 {
+    display: inline-block;
+}
+
+.div-fig-figcap {
+    margin: 20px auto;
 }

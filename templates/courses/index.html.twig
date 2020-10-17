@@ -17,9 +17,9 @@
             <div class="card-deck mb-3 text-center">
                 <div class="col-md-8 cour-block">
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
+                        <div class="card-body bnjr-block">
                             <div class="img"><img src="img/user.png" alt=""></div>
-                            <h1 class="bnjr">Bonjour à vous !</h1>
+                            <h2 class="bnjr">Bonjour à vous !</h2>
                         </div>
                     </div>
                 </div>
@@ -55,22 +55,34 @@
         </div>
 
         <div class="tab-content" id="cours">
-            <h1>Mes cours</h1>
+            <h1 style="text-align: center;">Prochain cours : {{ nextCourse }}</h1>
             <div class="div-cours">
                 {% for course in courses %}
                     <div class="col-md-5 cour-block">
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body">
-                                <h4>Cours régulier de {{ course.titleCourse }}</h4>
+                                <h4><strong>Cours régulier de {{ course.titleCourse }}</strong></h4>
                                 <h7>{{ course.daysCourse }}</h7>
-                                <div class="figure"><img src="img/backpack.png"></div>
-                                <div class="figcap">Toiwilou Hassane</div>
-                                <div class="figure"><img src="img/calendar.png"></div>
-                                <div class="figcap">Lundi, Mardi, Mercredi, Jeudi, Vendredi<span>À partir {{ course.daysCourse }}</span></div>
-                                <div class="figure"><img src="img/diplome.png"></div>
-                                <div class="figcap">6h/jour <span>À partir de 9h 15</span></div>
-                                <div class="figure"><img src="img/clock.png"></div>
-                                <div class="figcap">Makan Kone</div>
+                                <div class="div-fig-figcap">
+                                    <div class="figure1"><img src="img/backpack.png"></div>
+                                    <div class="figcap1"><strong>Toiwilou Hassane</strong></div>
+                                </div>
+                                <div class="div-fig-figcap">
+                                    <div class="figure2"><img src="img/calendar.png"></div>
+                                    <div class="figcap2">
+                                        Lundi, Mardi, Mercredi, Jeudi, Vendredi <br>
+                                        <span class="span-nextCourse">À partir {{ course.daysCourse }}</span>
+                                    </div>
+                                </div>
+                                <div class="div-fig-figcap">
+                                    <div class="figure3"><img src="img/clock.png"></div>
+                                    <div class="figcap3">6h/jour <span>À partir de 9h 15</span></div>
+                                </div>
+                                <div class="div-fig-figcap">
+                                    <div class="figure4"><img src="img/diplome.png"></div>
+                                    <div class="figcap4"><strong>Makan Kone</strong></div>
+                                </div>
+                                <h3 style="text-decoration: underline;">Description</h3>
                                 <p>{{ course.description }}</p>
                                 <button type="button" class="btn btn-lg btn-block detail">Détails</button>
                             </div>
