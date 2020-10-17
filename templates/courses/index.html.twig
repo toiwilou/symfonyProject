@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CoursesController!{% endblock %}
+{% block title %}Timetable{% endblock %}
 
 {% block body %}
 
@@ -19,12 +19,20 @@
 
         <div class="tab-content" id="cours">
             <h1>Mes cours</h1>
-
-            {% for course in courses %}
-                <h3>{{ course.titleCourse }}</h3>
-                <h3>{{ course.daysCourse }}</h3>
-                <p>{{ course.description }}</p>
-            {% endfor %}
+            <div class="div-cours">
+                {% for course in courses %}
+                    <div class="col-md-5 cour-block">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h3>{{ course.titleCourse }}</h3>
+                                <h3>{{ course.daysCourse }}</h3>
+                                <p>{{ course.description }}</p>
+                                <button type="button" class="btn btn-lg btn-block detail">Détails</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
 
         <div class="tab-content" id="profil">
