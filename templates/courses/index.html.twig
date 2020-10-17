@@ -3,27 +3,34 @@
 {% block title %}Hello CoursesController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello Cours ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/toiwilou/projects/symfonyProject/src/Controller/CoursesController.php'|file_link(0) }}">src/Controller/CoursesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/toiwilou/projects/symfonyProject/templates/courses/index.html.twig'|file_link(0) }}">templates/courses/index.html.twig</a></code></li>
+<div id="onglet">
+    <ul class="tabs">
+        <li><a href="https://teachr.fr/" target="_blank">Teach'r</a></li>
+        <li class="active"><a href="#accueil">Accueil</a></li>
+        <li><a href="#cours">Mes cours</a></li>
+        <li><a href="#profil">Mon profil</a></li>
     </ul>
+
+    <div class="tabs-content">
+        <div class="tab-content active" id="accueil">
+            <h1>Accueil</h1>
+        </div>
+
+        <div class="tab-content" id="cours">
+            <h1>Mes cours</h1>
+
+            {% for course in courses %}
+                <h3>{{ course.titleCourse }}</h3>
+                <h3>{{ course.daysCourse }}</h3>
+                <p>{{ course.description }}</p>
+            {% endfor %}
+        </div>
+
+        <div class="tab-content" id="profil">
+            <h1>Mon profil</h1>
+        </div>
+    </div>
 </div>
-
-<h2>Tous les cours</h2>
-
-{% for course in courses %}
-    <h3>{{ course.titleCourse }}</h3>
-    <h3>{{ course.daysCourse }}</h3>
-    <p>{{ course.description }}</p>
-{% endfor %}
 
 {% endblock %}
