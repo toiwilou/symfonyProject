@@ -15,11 +15,31 @@
     <div class="tabs-content">
         <div class="tab-content active" id="accueil">
             <h1>Accueil</h1>
+            <div class="card-deck mb-3 text-center">
+                <div class="col-md-8 cour-block">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div><img src="img/user.png" alt=""></div>
+                            <h1>Bonjour à vous !</h1>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><strong>Prochain cours</strong></h4>
+                  </div>
+                  <div class="card-body">
+                    <h4>{{ nextCourse }}</h4>
+                    <h3 class="nextCourseTitle"><strong>Un cours de {{ title }}</strong></h3>
+                    <p class="accueil-desc">{{ description }}</p>
+                  </div>
+                </div>
+            </div>
         </div>
 
         <div class="tab-content" id="cours">
             <h1>Mes cours</h1>
-            <h4 style="color: green;">{{ test }}</h4>
             <div class="div-cours">
                 {% for course in courses %}
                     <div class="col-md-5 cour-block">

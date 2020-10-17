@@ -147,7 +147,9 @@ class CoursesController extends AbstractController
         // Fonction de renvoie du prochain cours
         foreach($courses as $course){
             if(intval($course["intDay"]) >= $date["mday"] && intval($course["intMonth"]) >= $date["mon"]) {
-                $test = "Lundi le " . $course["intDay"] . " " . getStrDayFr(intval($course["intMonth"]));
+                $nextCourse = "Lundi le " . $course["intDay"] . " " . getStrDayFr(intval($course["intMonth"]));
+                $desc = $course["description"];
+                $title = $course["titleCourse"];
             break;
             }
         }
@@ -155,7 +157,9 @@ class CoursesController extends AbstractController
         return $this->render('courses/index.html.twig', [
             "courses" => $courses,
             "date" => $date,
-            "test" => $test
+            "nextCourse" => $nextCourse,
+            "description" => $desc,
+            "title" => $title,
         ]);
     }
 }

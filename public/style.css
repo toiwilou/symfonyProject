@@ -3,6 +3,16 @@ body {
     background-color: #dce6f5;
 }
 
+.accueil-desc {
+    text-align: justify;
+    padding: 10px;
+}
+
+.nextCourseTitle {
+    text-align: left;
+    margin: 10px;
+}
+
 
 /* ======================================== */
 
