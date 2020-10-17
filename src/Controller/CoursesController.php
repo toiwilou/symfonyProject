@@ -99,8 +99,63 @@ class CoursesController extends AbstractController
             ]
         ];
 
+        // Récupération de la date courante
+        $date = getdate();
+
+        // Fonction de traduction des mois en Français
+        function getStrDayFr($day){
+            switch($day){
+                case 1:
+                    return "janvier";
+                break;
+                case 2:
+                    return "février";
+                break;
+                case 3:
+                    return "mars";
+                break;
+                case 4:
+                    return "avril";
+                break;
+                case 5:
+                    return "mai";
+                break;
+                case 6:
+                    return "juin";
+                break;
+                case 7:
+                    return "juillet";
+                break;
+                case 8:
+                    return "août";
+                break;
+                case 9:
+                    return "séptembre";
+                break;
+                case 10:
+                    return "octobre";
+                break;
+                case 11:
+                    return "novembre";
+                break;
+                case 12:
+                    return "décembre";
+                break;
+            }
+        }
+
+        // Fonction de renvoie du prochain cours
+        foreach($courses as $course){
+            if(intval($course["intDay"]) >= $date["mday"] && intval($course["intMonth"]) >= $date["mon"]) {
+                $test = "Lundi le " . $course["intDay"] . " " . getStrDayFr(intval($course["intMonth"]));
+            break;
+            }
+        }
+
         return $this->render('courses/index.html.twig', [
             "courses" => $courses,
+            "date" => $date,
+            "test" => $test
         ]);
     }
 }
