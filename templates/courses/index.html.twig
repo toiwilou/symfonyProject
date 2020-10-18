@@ -45,7 +45,12 @@
                                 <div class="card-header header">
                                     <h4 class="my-0 font-weight-normal"><strong>{{ reservation.header }}</strong></h4>
                                 </div>
-                                <p class="header-description">{{ reservation.description }}</p>
+                                <p class="header-description">
+                                    {{ reservation.description }}
+                                    je vous invite à faire une reservation en 
+                                    remplissant un formulaire que vous aurez accès après avoir cliqué sur le bouton 
+                                    Reserver ci-dessous.
+                                </p>
                                 <button type="button" class="btn btn-primary">Reserver</button>
                             </div>
                         </div>
@@ -71,7 +76,7 @@
                                     <div class="figure2"><img src="img/calendar.png"></div>
                                     <div class="figcap2">
                                         Lundi, Mardi, Mercredi, Jeudi, Vendredi <br>
-                                        <span class="span-nextCourse">À partir {{ course.daysCourse }}</span>
+                                        <span class="span-nextCourse">À partir du lundi {{ course.intDay }}</span>
                                     </div>
                                 </div>
                                 <div class="div-fig-figcap">

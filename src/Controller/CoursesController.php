@@ -36,8 +36,8 @@ class CoursesController extends AbstractController
                 "intMonth" => 10,
                 "intYear" => 2020,
                 "description" => "Laravel est un framework PHP très utilisé pour le développement d'applications web. Une analyse montre
-                que Laravel reste, du moins pour le moment, au premier rang du classement des tchnologie PHP par sa légèreté et
-                les différents services qu'elle propose comme les services déjà présents (Apache, Nginx, MySQL,...), une facilité pour la 
+                que Laravel reste, du moins pour le moment, au premier rang du classement des technologie PHP par sa légèreté et
+                les différents services qu'elle propose, comme les services déjà présents (Apache, Nginx, MySQL,...), une facilité pour la 
                 virtualisation,..."
             ],
             "course3" => [
@@ -170,7 +170,7 @@ class CoursesController extends AbstractController
 
         // Fonction de renvoie du prochain cours
         foreach($courses as $course){
-            if(intval($course["intDay"]) >= $date["mday"] && intval($course["intMonth"]) >= $date["mon"]) {
+            if(intval($course["intDay"]) > $date["mday"] && intval($course["intMonth"]) >= $date["mon"]) {
                 $nextCourse = "Prochain cours : Lundi le " . $course["intDay"] . " " . getStrDayFr(intval($course["intMonth"]));
                 $desc = $course["description"];
                 $title = "Un cours de " . $course["titleCourse"];
@@ -186,30 +186,18 @@ class CoursesController extends AbstractController
         $reservations = [
             "res1" => [
                 "header" => "Prendre un cour régulier",
-                "description" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+                "description" => "Vous avez la possibilité de reserver un cours regulier pour le restant de l'année. Afin de suivre 
+                régulièrement un ou plusieurs cours parmi ceux que nous proposons," 
             ],
             "res2" => [
                 "header" => "Prendre un cours ponctuel",
-                "description" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+                "description" => "Si vous le souhaitez, vous pouvez aussi prendre un cours ponctuel et choisir les jours et les 
+                horaires qui vous semblent adaptés. Si Vous êtes interessé," 
             ],
             "res3" => [
                 "header" => "Reserver un stage",
-                "description" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+                "description" => "Encore mieux, vous pouvez concrétiser vos compétences et interagir avec des professionnels. C'est 
+                toujours mieux d'avoir à vos côtés des experts pour vous accompager sur votre montée en compétence. Si ça vous dit," 
             ]
         ];
 
