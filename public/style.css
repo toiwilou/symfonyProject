@@ -144,3 +144,7 @@ ul.tabs, .tabs li {
 .div-fig-figcap {
     margin: 20px auto;
 }
+
+.div-detail-js {
+    display: none;
+}
