@@ -18,7 +18,7 @@
                 <div class="col-md-8 cour-block">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body bnjr-block">
-                            <div class="img"><img src="img/user.png" alt=""></div>
+                            <div class="img"><img src="img/user.png"></div>
                             <h2 class="bnjr">Bonjour à vous !</h2>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                   </div>
                   <div class="card-body">
                     <h4>{{ nextCourse }}</h4>
-                    <h3 class="nextCourseTitle"><strong>Un cours de {{ title }}</strong></h3>
+                    <h3 class="nextCourseTitle"><strong>{{ title }}</strong></h3>
                     <p class="accueil-desc">{{ description }}</p>
                     <button type="button" class="btn btn-primary">Détails</button>
                   </div>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="tab-content" id="cours">
-            <h1 style="text-align: center;">Prochain cours : {{ nextCourse }}</h1>
+            <h1 style="text-align: center;">{{ nextCourse }}</h1>
             <div class="div-cours">
                 {% for course in courses %}
                     <div class="col-md-5 cour-block">
@@ -82,11 +82,12 @@
                                     <div class="figure4"><img src="img/diplome.png"></div>
                                     <div class="figcap4"><strong>Makan Kone</strong></div>
                                 </div>
-                                    <div id="div-detail-js" class="div-detail-js">
-                                        <h3 style="text-decoration: underline;">Description</h3>
-                                        <p>{{ course.description }}</p>
-                                    </div>
-                                <button id="btn-detail" type="button" class="btn btn-lg btn-block detail btn-detail">Détails</button>
+                                <div id="{{ course.div_id }}" class="div-detail-js">
+                                    <h3 style="text-decoration: underline;">Description</h3>
+                                    <p>{{ course.description }}</p>
+                                    <button id="{{ course.btnid }}" type="button" class="btn btn-lg btn-block" style="background-color: #f7b388; color: #d63118;">Fermer</button>
+                                </div>
+                                <button id="{{ course.btn_id }}" type="button" class="btn btn-lg btn-block detail btn-detail">Détails</button>
                             </div>
                         </div>
                     </div>

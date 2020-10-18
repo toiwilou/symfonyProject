@@ -15,6 +15,9 @@ class CoursesController extends AbstractController
         // Tableau des cours
         $courses = [
             "course1" => [
+                "btnid" => "btnid-1",
+                "div_id" => "div-detail-js-1",
+                "btn_id" => "btn-detail-1",
                 "titleCourse" => "Node.js",
                 "daysCourse" => "Du lundi 28 séptembre au vendredi 04 octobre 2020",
                 "intDay" => 28,
@@ -24,6 +27,9 @@ class CoursesController extends AbstractController
                 Cette plateforme propose plusieurs module comme HTTP, Express, Mongoose,... qui rendent le développement plus intuitif."
             ],
             "course2" => [
+                "btnid" => "btnid-2",
+                "div_id" => "div-detail-js-2",
+                "btn_id" => "btn-detail-2",
                 "titleCourse" => "Laravel",
                 "daysCourse" => "Du lundi 19 au vendredi 23 octobre 2020",
                 "intDay" => 19,
@@ -35,6 +41,9 @@ class CoursesController extends AbstractController
                 virtualisation,..."
             ],
             "course3" => [
+                "btnid" => "btnid-3",
+                "div_id" => "div-detail-js-3",
+                "btn_id" => "btn-detail-3",
                 "titleCourse" => "CDP (Continuous data protection)",
                 "daysCourse" => "Du 28 séptembre au 04 octobre 2020",
                 "intDay" => 26,
@@ -45,6 +54,9 @@ class CoursesController extends AbstractController
                 travers un réseau."
             ],
             "course4" => [
+                "btnid" => "btnid-4",
+                "div_id" => "div-detail-js-4",
+                "btn_id" => "btn-detail-4",
                 "titleCourse" => "JAVA J2E",
                 "daysCourse" => "Du 23 au 27 novembre 2020 et reprend le 18 jusqu'au 22 janvier 2021",
                 "intDay" => 23,
@@ -55,6 +67,9 @@ class CoursesController extends AbstractController
                 une technologie orienté web à base de Java trés utilisé en entreprise pour sa sécurité."
             ],
             "course5" => [
+                "btnid" => "btnid-5",
+                "div_id" => "div-detail-js-5",
+                "btn_id" => "btn-detail-5",
                 "titleCourse" => "C#",
                 "daysCourse" => "Du 22 au 26 février et repend le 22 jusqu'au 26 mars 2021",
                 "intDay" => 22,
@@ -66,6 +81,9 @@ class CoursesController extends AbstractController
                 applications web sur la plateforme ASP.NET."
             ],
             "course6" => [
+                "btnid" => "btnid-6",
+                "div_id" => "div-detail-js-6",
+                "btn_id" => "btn-detail-6",
                 "titleCourse" => "Python",
                 "daysCourse" => "Du 19 au 23 avril et reprend le 25 jusqu'au 28 mai 2021",
                 "intDay" => 19,
@@ -77,6 +95,9 @@ class CoursesController extends AbstractController
                 ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl."
             ],
             "course7" => [
+                "btnid" => "btnid-7",
+                "div_id" => "div-detail-js-7",
+                "btn_id" => "btn-detail-7",
                 "titleCourse" => "ROR (Ruby on Rails)",
                 "daysCourse" => "Du 21 au 25 juin 2021",
                 "intDay" => 21,
@@ -88,6 +109,9 @@ class CoursesController extends AbstractController
                 soi-même la plupart des routines obligatoires d'une application web."
             ],
             "course8" => [
+                "btnid" => "btnid-8",
+                "div_id" => "div-detail-js-8",
+                "btn_id" => "btn-detail-8",
                 "titleCourse" => "Android",
                 "daysCourse" => "Du 28 juin au 02 juillet et reprend le 05 jusqu'au 09 juillet 2021",
                 "intDay" => 28,
@@ -147,10 +171,14 @@ class CoursesController extends AbstractController
         // Fonction de renvoie du prochain cours
         foreach($courses as $course){
             if(intval($course["intDay"]) >= $date["mday"] && intval($course["intMonth"]) >= $date["mon"]) {
-                $nextCourse = "Lundi le " . $course["intDay"] . " " . getStrDayFr(intval($course["intMonth"]));
+                $nextCourse = "Prochain cours : Lundi le " . $course["intDay"] . " " . getStrDayFr(intval($course["intMonth"]));
                 $desc = $course["description"];
-                $title = $course["titleCourse"];
-            break;
+                $title = "Un cours de " . $course["titleCourse"];
+                break;
+            } else {
+                $nextCourse = "Il n'y a plus de cours prévu pour cette année !";
+                $desc = "";
+                $title = "";
             }
         }
 
