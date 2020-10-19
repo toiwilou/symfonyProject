@@ -5,17 +5,39 @@
 {% block body %}
 
 <div class="card mb-4 shadow-sm reservation">
-    <h1>Reservation</h1>
-    <h1 style="text-align: right;">Reservation</h1>
-    <form method="POST" style="text-align: center;">
-        <input type="text" name="firstname"><br><br>
-        <input type="text" name="lastname"><br><br>
-        <input type="tel" name="phone"><br><br>
-        <input type="email" name="email"><br><br>
-        <input type="submit" name="envoyer" value="envoyer">
+    <h1 style="text-align: center; color: #85ace6;">Reservation</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nom</label>
+            <input type="text" name="firstname" class="form-control" placeholder="Votre nom">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Prénom</label>
+            <input type="text" name="lastname" class="form-control" placeholder="Votre prénom">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Téléphone</label>
+            <input type="tel" name="phone" class="form-control" placeholder="Votre numéro de téléphone">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Votre adresse email">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Choisissez votre reservation</label>
+            <select name="reservation" class="form-control">
+                <option>Sélectionner un élement</option>
+                <option>Cours régulier</option>
+                <option>Cours ponctuel</option>
+                <option>Stage</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea name="message" class="form-control" rows="3" placeholder="Votre message de reservation"></textarea>
+        </div>
     </form>
-    {{tester}}
-    {{test}}
 </div>
 
 {% endblock %}
