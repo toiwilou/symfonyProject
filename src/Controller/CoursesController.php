@@ -44,12 +44,12 @@ class CoursesController extends AbstractController
                 "btnid" => "btnid-3",
                 "div_id" => "div-detail-js-3",
                 "btn_id" => "btn-detail-3",
-                "titleCourse" => "CDP (Continuous data protection)",
+                "titleCourse" => "CDP",
                 "daysCourse" => "Du 28 séptembre au 04 octobre 2020",
                 "intDay" => 26,
                 "intMonth" => 10,
                 "intYear" => 2020,
-                "description" => "Il s'agit d'une solution de protection de données. Le principe est de capturer la moindre modification 
+                "description" => "(Continuous data protection), il s'agit d'une solution de protection de données. Le principe est de capturer la moindre modification 
                 de données d’un système de stockage primaire pour la copier vers un autre système de stockage entièrement séparé et ce à 
                 travers un réseau."
             ],
@@ -71,7 +71,7 @@ class CoursesController extends AbstractController
                 "div_id" => "div-detail-js-5",
                 "btn_id" => "btn-detail-5",
                 "titleCourse" => "C#",
-                "daysCourse" => "Du 22 au 26 février et repend le 22 jusqu'au 26 mars 2021",
+                "daysCourse" => "Du 22 au 26 février et reprend le 22 jusqu'au 26 mars 2021",
                 "intDay" => 22,
                 "intMonth" => 2,
                 "intYear" => 2021,

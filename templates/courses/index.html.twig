@@ -32,7 +32,7 @@
                     <h4>{{ nextCourse }}</h4>
                     <h3 class="nextCourseTitle"><strong>{{ title }}</strong></h3>
                     <p class="accueil-desc">{{ description }}</p>
-                    <button type="button" class="btn btn-primary">Détails</button>
+                    <button id="btnAlert" type="button" class="btn btn-primary">Détails</button>
                   </div>
                 </div>
             </div>
@@ -51,7 +51,8 @@
                                     remplissant un formulaire que vous aurez accès après avoir cliqué sur le bouton 
                                     Reserver ci-dessous.
                                 </p>
-                                <button type="button" class="btn btn-primary">Reserver</button>
+
+                                <a href="{{ path("reservation") }}"><button type="button" class="btn btn-primary">Reserver</button></a>
                             </div>
                         </div>
                     </div>
@@ -81,11 +82,11 @@
                                 </div>
                                 <div class="div-fig-figcap">
                                     <div class="figure3"><img src="img/clock.png"></div>
-                                    <div class="figcap3">6h/jour <span>À partir de 9h 15</span></div>
+                                    <div class="figcap3">6h / jour à partir de 9h 15</div>
                                 </div>
                                 <div class="div-fig-figcap">
                                     <div class="figure4"><img src="img/diplome.png"></div>
-                                    <div class="figcap4"><strong>Makan Kone</strong></div>
+                                    <div class="figcap4"><strong>Makan KONE</strong></div>
                                 </div>
                                 <div id="{{ course.div_id }}" class="div-detail-js">
                                     <h3 style="text-decoration: underline;">Description</h3>

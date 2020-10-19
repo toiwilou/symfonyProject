@@ -24,3 +24,11 @@ while(i < 8){
     blockDetail("btn-detail-" + (i+1), "div-detail-js-" + (i+1), "btnid-" + (i+1));
     i++;
 }
+
+var btnAlert = document.getElementById('btnAlert');
+
+btnAlert.addEventListener('click', popup);
+
+function popup(){
+    alert('Enseignant : Makan KONE');
+}
