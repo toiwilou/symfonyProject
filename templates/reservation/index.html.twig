@@ -7,37 +7,66 @@
 <div class="card mb-4 shadow-sm reservation">
     <h1 style="text-align: center; color: #85ace6;">Reservation</h1>
 
-    <form>
+    {% if nom != null  %}
+        <p style="color: green;">
+            {{ message }}
+        </p>
+    {% endif %}
+
+    <form id="formulaire" method="POST">
+        <div class="form-check form-check-inline">
+            <input required class="form-check-input" type="radio" name="sexe" value="Mr">
+            <label class="form-check-label" for="inlineRadio1">Monsieur</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input required class="form-check-input" type="radio" name="sexe" value="Mme">
+            <label class="form-check-label" for="inlineRadio2">Madame</label>
+        </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Nom</label>
-            <input type="text" name="firstname" class="form-control" placeholder="Votre nom">
+            <input required type="text" name="firstname" class="form-control" placeholder="Votre nom">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Prénom</label>
-            <input type="text" name="lastname" class="form-control" placeholder="Votre prénom">
+            <input required type="text" name="lastname" class="form-control" placeholder="Votre prénom">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Téléphone</label>
-            <input type="tel" name="phone" class="form-control" placeholder="Votre numéro de téléphone">
+            <input required type="tel" name="phone" class="form-control" placeholder="Votre numéro de téléphone">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Email</label>
-            <input type="email" name="email" class="form-control" placeholder="Votre adresse email">
+            <input required type="email" name="email" class="form-control" placeholder="Votre adresse email">
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Choisissez votre reservation</label>
-            <select name="reservation" class="form-control">
-                <option>Sélectionner un élement</option>
-                <option>Cours régulier</option>
-                <option>Cours ponctuel</option>
-                <option>Stage</option>
+            <select name="reservation" class="form-control" required>
+                <option value="">Sélectionner un élement</option>
+                <option value="Cours régulier">Cours régulier</option>
+                <option value="Cours ponctuel">Cours ponctuel</option>
+                <option value="Stage">Stage</option>
             </select>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Message</label>
-            <textarea name="message" class="form-control" rows="3" placeholder="Votre message de reservation"></textarea>
+            <textarea required name="message" class="form-control" rows="3" placeholder="Votre message de reservation"></textarea>
         </div>
+        <input id="btnPopup" type="submit" class="btn btn-primary" value="Envoyer">
+        <a href="/"><button type="button" class="btn btn-outline-info">Retour à l'accueil</button></a>
     </form>
 </div>
+
+<script>
+    var btnPopup = document.getElementById('btnPopup');
+    var overlay = document.getElementById('overlay');
+    var form = document.getElementById('formulaire');
+
+    btnPopup.addEventListener('submit',afterSend);
+
+    function afterSend(){
+        overlay.style.display = 'block';
+        form.style.display  = 'none';
+    }
+</script>
 
 {% endblock %}

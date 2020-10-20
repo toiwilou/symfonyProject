@@ -25,10 +25,30 @@ while(i < 8){
     i++;
 }
 
+/* ========================================= */
+
 var btnAlert = document.getElementById('btnAlert');
 
 btnAlert.addEventListener('click', popup);
 
 function popup(){
     alert('Enseignant : Makan KONE');
+}
+
+/* ========================================== */
+
+var btnPopup = document.getElementById('btnPopup');
+var overlay = document.getElementById('overlay');
+var btnClose = document.getElementById('btnClose');
+
+btnPopup.addEventListener('click',openModal);
+
+btnClose.addEventListener('click', closePopup);
+
+function closePopup(){
+    overlay.style.display = 'none';
+}
+
+function openModal(){
+    overlay.style.display = 'block';
 }
