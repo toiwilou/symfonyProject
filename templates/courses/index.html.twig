@@ -4,6 +4,25 @@
 
 {% block body %}
 
+<style>
+    .fig1, .figcap1 {
+        display: inline-block;
+    }
+    .fig2, .figcap2 {
+        display: inline-block;
+    }
+    .fig3, .figcap3 {
+        display: inline-block;
+    }
+    .fig4, .figcap4 {
+        display: inline-block;
+    }
+
+    .div-contact div {
+        margin: 5%;
+    }
+</style>
+
 <div id="onglet">
     <ul class="tabs">
         <li><a href="https://teachr.fr/" target="_blank">Teach'r</a></li>
@@ -102,7 +121,63 @@
         </div>
 
         <div class="tab-content" id="profil">
-            <h1>Mon profil</h1>
+            <div class="card-deck mb-3 text-center">
+                <div class="col-md-8 cour-block">
+                    <div class="card mb-4 shadow-sm">
+                        <div style="text-align: center;" class="card-body bnjr-block">
+                            <div><img src="{{ asset("img/profil.png") }}"></div>
+                            <h1 style="color: #070f7d;">Toiwilou Hassane</h1>
+                            <span style="color: #3441ed;"><strong>Développeur web et applications</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 cour-block">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="div-contact card-body bnjr-block">
+                            <div>
+                                <div class="fig1"><img src="{{ asset("img/map.png") }}"></div>
+                                <h6 class="figcap1">13 rue Saint Georges 94480 </h6><br>
+                                <span>Ablon-sur-Seine</span>
+                            </div>
+                            <div>
+                                <div class="fig2"><img src="{{ asset("img/telephone.png") }}"></div>
+                                <h6 class="figcap2">06 23 52 41 31</h6>
+                            </div>
+                            <div>
+                                <div class="fig3"><img src="{{ asset("img/gmail.png") }}"></div>
+                                <h6 style="text-decoration: underline; color: #1ddbf0;" class="figcap3">toiwilouhassane@gmail.com</h6>
+                            </div>
+                            <div>
+                                <div class="fig4"><img src="{{ asset("img/linkedin.png") }}"></div>
+                                <h6 class="figcap4">Toiwilou Hassane</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck mb-3 text-center">
+                <div class="col-md-4 cour-block">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body bnjr-block">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 cour-block">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body bnjr-block">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 cour-block">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body bnjr-block">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -186,12 +186,3 @@ ul.tabs, .tabs li {
 /* =========================================== */
 
 
-
-.overlay {
-    display: none;
-}
-
-.btnClose{
-    float: right;
-    cursor: pointer;
-}
