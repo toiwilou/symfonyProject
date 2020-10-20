@@ -27,9 +27,9 @@ class ReservationController extends AbstractController
         // Prépation du message reçu
         $monMessage = $message . "
         
-        - Télephone : " . $phone . "
-        - email : " . $email .
-        "- Reservation : " . $reservation; 
+- Télephone : " . $phone . "
+- email : " . $email . "
+- Reservation : " . $reservation; 
         
         // Message de remerciement
         $message_complet ="Merci " . $req->request->get("sexe") . " " . $req->request->get("firstname") . " " . $req->request->get("lastname") . "
