@@ -5,6 +5,11 @@
 {% block body %}
 
 <style>
+    .headerProfil {
+        text-align: center;
+        color: blue;
+    }
+
     .fig1, .figcap1 {
         display: inline-block;
     }
@@ -19,7 +24,62 @@
     }
 
     .div-contact div {
-        margin: 5%;
+        margin: 4%;
+    }
+
+    .divTech {
+        padding: 30px;
+    }
+
+    .divTech > div{
+        margin: 3%;
+    }
+
+    .divOut {
+        width: 50%;
+        height: 15px;
+        background-color: rgb(202, 209, 223);
+    }
+
+    .divIn1 {
+        width: 49%;
+        height: 15px;
+        background-color: rgb(17, 31, 226);
+    }
+
+    .divIn2 {
+        width: 41%;
+        height: 15px;
+        background-color: rgb(214, 150, 13);
+    }
+
+    .divIn3 {
+        width: 64%;
+        height: 15px;
+        background-color: rgb(255, 0, 157);
+    }
+
+    .divIn4 {
+        width: 78%;
+        height: 15px;
+        background-color: rgb(44, 221, 28);
+    }
+
+    .divIn5 {
+        width: 58%;
+        height: 15px;
+        background-color: rgb(6, 210, 236);
+    }
+    
+    .divIn6 {
+        width: 26%;
+        height: 15px;
+        background-color: rgb(231, 8, 8);
+    }
+
+    .titreFormation {
+        color: #070f7d;
+        text-decoration: underline;
     }
 </style>
 
@@ -134,6 +194,7 @@
                 <div class="col-md-4 cour-block">
                     <div class="card mb-4 shadow-sm">
                         <div class="div-contact card-body bnjr-block">
+                            <h3 class="headerProfil">Contact</h3>
                             <div>
                                 <div class="fig1"><img src="{{ asset("img/map.png") }}"></div>
                                 <h6 class="figcap1">13 rue Saint Georges 94480 </h6><br>
@@ -158,22 +219,66 @@
             <div class="card-deck mb-3 text-center">
                 <div class="col-md-4 cour-block">
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body bnjr-block">
-
+                        <div class="divTech card-body bnjr-block">
+                            <h3 class="headerProfil">Technologies</h3>
+                            <div>
+                                <div><h6>Symfony / Laravel / API REST</h6></div>
+                                <div class="divOut"><div class="divIn1"></div></div>
+                            </div>
+                            <div>
+                                <div><h6>Node.js / Expressjs / MongoDB</h6></div>
+                                <div class="divOut"><div class="divIn2"></div></div>
+                            </div>
+                            <div>
+                                <div><h6>HTML / CSS / Git</h6></div>
+                                <div class="divOut"><div class="divIn3"></div></div>
+                            </div>
+                            <div>
+                                <div><h6>Java SE</h6></div>
+                                <div class="divOut"><div class="divIn4"></div></div>
+                            </div>
+                            <div>
+                                <div><h6>Bootstrap / PHP / JavaScript / SQL</h6></div>
+                                <div class="divOut"><div class="divIn5"></div></div>
+                            </div>
+                            <div>
+                                <div><h6>ReactJS</h6></div>
+                                <div class="divOut"><div class="divIn6"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 cour-block">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body bnjr-block">
-                            
+                            <h3 class="headerProfil divTech">Projets personnels</h3>
+                            <p>Site internet personnel en HTML / CSS / PHP / JavaScript</p>
+                            <a href="http://35.233.125.13/public/" target="_blank"><button type="button" class="btn btn-outline-primary">Voir</button></a>
+                            <p>Programme java de simulation d'une calculatrice</p>
+                            <a href="https://onlinegdb.com/HkCL2SF_8" target="_blank"><button type="button" class="btn btn-outline-primary">Voir</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 cour-block">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body bnjr-block">
-                            
+                            <h4 class="headerProfil">Formations</h4>
+                            <h6 class="titreFormation">2020 - 2022 : Master (en cours)</h6>
+                            <p>
+                                Architecte technique en informatique à l'école INSTA Paris
+                            </p>
+                            <h6 class="titreFormation">2019 - 2020 : Bachelor</h6>
+                            <p>
+                                Analyse en genie logiciel à l'école INSTA Paris
+                            </p>
+                            <h6 class="titreFormation">2016 - 2019 : Licence</h6>
+                            <p>
+                                Mathématiques fondamentales à l'Université des Comores
+                            </p>
+                            <h6 class="titreFormation">2015 - 2016 : Bac</h6>
+                            <p>
+                                Baccalauréat scientifique aux Comores
+                            </p>
                         </div>
                     </div>
                 </div>
